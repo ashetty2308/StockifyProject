@@ -100,7 +100,6 @@ public class SearchFragment extends Fragment {
 
 
                     userString = String.valueOf(userInput.getText());
-                    Log.d("Messi",userString);
 
                     graph.removeAllSeries();
 
@@ -117,18 +116,12 @@ public class SearchFragment extends Fragment {
                         InputStream inputStream = urlConnection.getInputStream();
                         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
 
-                        Log.d("URL",url.toString());
-
                         String news = bufferedReader.lines().collect(Collectors.joining());
                         stringData = new JSONObject(news);
 
                         String varX = stringData.getJSONObject("Meta Data").get("3. Last Refreshed").toString();
 
-                        Log.d("check",varX);
-
                         currentPrice = String.valueOf(stringData.getJSONObject("Time Series (5min)").getJSONObject(varX).get("2. high"));
-
-                        Log.d("last",currentPrice);
 
                     } catch (MalformedURLException e) {
                         e.printStackTrace();
@@ -151,14 +144,9 @@ public class SearchFragment extends Fragment {
                         String newsTwo = bufferedReaderTwo.lines().collect(Collectors.joining());
                         stringDataTwo = new JSONObject(newsTwo);
 
-                        Log.d("tsla",urlTwo.toString());
                         String varX2 = stringDataTwo.getJSONObject("Meta Data").get("3. Last Refreshed").toString();
 
-                        Log.d("polo",varX2);
-
-
                         yesterdayPrice = stringDataTwo.getJSONObject("Time Series (Daily)").getJSONObject(varX2).get("2. high").toString();
-                        Log.d("first",yesterdayPrice);
 
 
                     } catch (MalformedURLException e) {
@@ -180,7 +168,6 @@ public class SearchFragment extends Fragment {
                         String st3 = br3.lines().collect(Collectors.joining());
                         sd3 = new JSONArray(st3);
 
-                        Log.d("URL",u3.toString());
                         companyDescription.setText("Description: "+sd3.getJSONObject(0).getString("description"));
 
 

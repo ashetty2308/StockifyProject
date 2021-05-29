@@ -114,14 +114,6 @@ public class HomeFragment extends Fragment {
                 arrayAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1,titleList);
 
 
-
-                for(int i = 0; i < titleList.size(); i++){
-                    Log.d("title",imageList.get(i));
-                }
-
-                Log.d("News",stringData.toString());
-
-
             } catch (MalformedURLException e) {
                 e.printStackTrace();
             } catch (IOException e) {
