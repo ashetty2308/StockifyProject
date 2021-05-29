@@ -110,7 +110,7 @@ public class Act_news_eight extends AppCompatActivity {
             }
 
             try {
-                author.setText("By: "+stringData.getJSONArray("results").getJSONObject(7).getJSONArray("creator").get(0).toString());
+                author.setText(stringData.getJSONArray("results").getJSONObject(7).getJSONArray("creator").get(0).toString());
             } catch (JSONException e) {
                 e.printStackTrace();
             }
@@ -126,6 +126,11 @@ public class Act_news_eight extends AppCompatActivity {
                 e.printStackTrace();
             }
 
+            /*
+                - getting the article content
+                - some have null, so I made sure to check if it was null
+                    - if the value of the API call for the story was null, I
+             */
             try {
 
                 story.setText("Article: "+stringData.getJSONArray("results").getJSONObject(7).get("content").toString());

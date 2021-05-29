@@ -92,32 +92,32 @@ public class Act_news_nine extends AppCompatActivity {
         @Override
         protected void onPostExecute(Void aVoid) {
             try {
-                String imageURL = stringData.getJSONArray("results").getJSONObject(9).get("image_url").toString();
+                String imageURL = stringData.getJSONArray("results").getJSONObject(8).get("image_url").toString();
             } catch (JSONException e) {
                 e.printStackTrace();
             }
 
             try {
-                caption.setText("Caption: "+stringData.getJSONArray("results").getJSONObject(9).get("description").toString());
+                caption.setText("Caption: "+stringData.getJSONArray("results").getJSONObject(8).get("description").toString());
             } catch (JSONException e) {
                 e.printStackTrace();
             }
 
             try {
-                title.setText("Title: "+stringData.getJSONArray("results").getJSONObject(9).get("title").toString());
+                title.setText("Title: "+stringData.getJSONArray("results").getJSONObject(8).get("title").toString());
             } catch (JSONException e) {
                 e.printStackTrace();
             }
 
             try {
-                author.setText("By: "+stringData.getJSONArray("results").getJSONObject(9).getJSONArray("creator").get(0).toString());
+                author.setText("By: "+stringData.getJSONArray("results").getJSONObject(8).getJSONArray("creator").get(0).toString());
             } catch (JSONException e) {
                 e.printStackTrace();
             }
 
             try {
-                if(!stringData.getJSONArray("results").getJSONObject(9).get("image_url").toString().equals("null")){
-                    Picasso.get().load(stringData.getJSONArray("results").getJSONObject(9).get("image_url").toString()).into(imageView);
+                if(!stringData.getJSONArray("results").getJSONObject(8).get("image_url").toString().equals("null")){
+                    Picasso.get().load(stringData.getJSONArray("results").getJSONObject(8).get("image_url").toString()).into(imageView);
                 }
                 else{
                     imageView.setImageResource(R.drawable.wallstreet);
@@ -128,7 +128,7 @@ public class Act_news_nine extends AppCompatActivity {
 
             try {
 
-                story.setText("Article: "+stringData.getJSONArray("results").getJSONObject(9).get("content").toString());
+                story.setText("Article: "+stringData.getJSONArray("results").getJSONObject(8).get("content").toString());
             } catch (JSONException e) {
                 e.printStackTrace();
             } {
