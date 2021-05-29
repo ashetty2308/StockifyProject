@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1065888787991",
+    "project_id": "stockify-1b067",
+    "storage_bucket": "stockify-1b067.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1065888787991:android:dbc43ee0297fd16c613652",
+        "android_client_info": {
+          "package_name": "com.example.stockify"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1065888787991-dn4g9r4j3bjmkc4kamv4evcnlksnrj8k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDT-2j1enl7WhM-kqluTce7h1jhamEByZA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1065888787991-dn4g9r4j3bjmkc4kamv4evcnlksnrj8k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

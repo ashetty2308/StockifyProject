@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Stockify</string>
+    <string name="learn_fragment">Learn Fragment</string>
+</resources>
