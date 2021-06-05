@@ -3,8 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/tvHeadline"
+    android:background="@drawable/introwallpaper"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
 
     <TextView
         android:id="@+id/textView"
@@ -42,14 +44,13 @@
 
     <ListView
         android:id="@+id/list"
-        android:layout_width="306dp"
-        android:layout_height="405dp"
+        android:layout_width="315dp"
+        android:layout_height="367dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.806" />
+        app:layout_constraintVertical_bias="0.64" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

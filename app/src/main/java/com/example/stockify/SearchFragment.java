@@ -1,19 +1,16 @@
 package com.example.stockify;
 
-import android.content.Context;
-import android.content.SharedPreferences;
+import android.annotation.SuppressLint;
 import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.StrictMode;
-import android.preference.PreferenceManager;
 import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -37,15 +34,9 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.lang.reflect.Array;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
-import java.text.DateFormat;
-import java.time.Year;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
 import java.util.stream.Collectors;
 
 public class SearchFragment extends Fragment {
@@ -65,7 +56,7 @@ public class SearchFragment extends Fragment {
         new GetWeeklyData().execute();
 
         //directions for user
-        TextView banner = getActivity().findViewById(R.id.findStock);
+        TextView banner = getActivity().findViewById(R.id.findCompanySymbolBanner);
         banner.setText("Find A Stock");
     }
     public class GetWeeklyData extends AsyncTask<Void, Void, Void> {
@@ -86,7 +77,11 @@ public class SearchFragment extends Fragment {
         protected Void doInBackground(Void... voids) {
 
             GraphView graph = getActivity().findViewById(R.id.graph);
+
+            graph.getGridLabelRenderer().setHorizontalLabelsColor(Color.WHITE);
+            graph.getGridLabelRenderer().setVerticalLabelsColor(Color.WHITE);
             TextView companyDescription = getActivity().findViewById(R.id.companyDesc);
+
 
             //allowing vertical scrolling for the company description TV
             companyDescription.setMovementMethod(new ScrollingMovementMethod());
@@ -97,16 +92,21 @@ public class SearchFragment extends Fragment {
              */
 
             searchUserStock.setOnClickListener(new View.OnClickListener() {
+                @SuppressLint("SetTextI18n")
                 @Override
                 public void onClick(View v) {
 
+
                     userString = String.valueOf(userInput.getText());
+                    userString.toUpperCase();
 
                     //clearing all the points on the graph I imported
+
                     graph.removeAllSeries();
 
                     StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
                     StrictMode.setThreadPolicy(policy);
+
                     /*
                         - First API call to Alpha Vantage
                         - This is the INTRADAY call to get the latest price. Using this as the first point of my graph.
@@ -117,7 +117,7 @@ public class SearchFragment extends Fragment {
                         JSONObject stringData = new JSONObject();
 
 
-                        URL url = new URL("https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol="+userString+"&interval=5min&apikey=7EIJLD0YADO3W5PD");
+                        URL url = new URL("https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol="+userString+"&interval=5min&apikey=H9PSROZRHKTPCTOR");
                         URLConnection urlConnection = url.openConnection();
                         InputStream inputStream = urlConnection.getInputStream();
                         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
@@ -147,7 +147,7 @@ public class SearchFragment extends Fragment {
                         JSONObject stringDataTwo = new JSONObject();
 
 
-                        URL urlTwo = new URL("https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol="+userString+"&interval=5min&apikey=7EIJLD0YADO3W5PD");
+                        URL urlTwo = new URL("https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol="+userString+"&interval=5min&apikey=H9PSROZRHKTPCTOR");
                         URLConnection urlConnectionTwo = urlTwo.openConnection();
                         InputStream inputStreamTwo = urlConnectionTwo.getInputStream();
                         BufferedReader bufferedReaderTwo = new BufferedReader(new InputStreamReader(inputStreamTwo));
@@ -156,7 +156,9 @@ public class SearchFragment extends Fragment {
                         stringDataTwo = new JSONObject(newsTwo);
 
                         String varX2 = stringDataTwo.getJSONObject("Meta Data").get("3. Last Refreshed").toString();
+                        Log.d("Var x2",varX2);
                         yesterdayPrice = stringDataTwo.getJSONObject("Time Series (Daily)").getJSONObject(varX2).get("2. high").toString();
+
 
 
                     } catch (MalformedURLException e) {
@@ -205,7 +207,11 @@ public class SearchFragment extends Fragment {
                             - Since it is over a 1 day time period, there is no need to divide this value by the change in X
                      */
 
-                    graph.setTitle(userString+": Current Stock Price vs Yesterday High");
+                    graph.setTitle(userString.toUpperCase()+": Current Stock Price vs Yesterday High");
+
+                    graph.getGridLabelRenderer().setHorizontalLabelsColor(Color.WHITE);
+                    graph.getGridLabelRenderer().setVerticalLabelsColor(Color.WHITE);
+
 
                     Double slope = Double.parseDouble(currentPrice)-Double.parseDouble(yesterdayPrice);
                     if(slope>0){

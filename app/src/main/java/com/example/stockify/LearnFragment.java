@@ -31,12 +31,10 @@ public class LearnFragment extends Fragment {
         TextView volume = getActivity().findViewById(R.id.volumeDef);
         TextView defClose = getActivity().findViewById(R.id.closeDef);
 
-
-
-        defMarket.setText("Stock Market: a place where stocks (partial owenerships of a company) are bought and sold");
+        defMarket.setText("Stock Market: a place where stocks (partial ownerships of a company) are bought and sold");
         defOpen.setText("Open Price: The open price is the price of the stock when the market opens.");
-        defHigh.setText("High: The highest price at which a stock was at during a certain interval (in this case, the highst price during a 5 minute interval.");
-        defLow.setText("Low: The lowest price at which a stock was at during a certain interval (in this case, the highst price during a 5 minute interval.");
+        defHigh.setText("High: The highest price at which a stock was at during a certain interval (in this case, the highest price during a 5 minute interval.");
+        defLow.setText("Low: The lowest price at which a stock was at during a certain interval (in this case, the lowest price during a 5 minute interval.");
         volume.setText("Volume: The amount of shares a company has present at a given time.");
         defClose.setText("Close Price: The price of a share when the market closes (In this case, the price of the share following the end of the 5 minute interval");
     }

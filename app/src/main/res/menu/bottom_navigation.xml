@@ -13,13 +13,13 @@
 
     <item
         android:id="@+id/nav_stocks"
-        android:icon="@drawable/ic_baseline_attach_money_24"
-        android:title="My Stocks"/>
+        android:icon="@android:drawable/btn_plus"
+        android:title="Find Ticker" />
 
     <item
         android:id="@+id/nav_search"
         android:icon="@drawable/ic_baseline_search_24"
-        android:title="Search"/>
+        android:title="Stock Data" />
 
     <item
         android:id="@+id/nav_saved"

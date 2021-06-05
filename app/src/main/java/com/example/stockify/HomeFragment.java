@@ -39,7 +39,6 @@ import java.util.stream.Collectors;
 
 public class HomeFragment extends Fragment {
 
-
     public HomeFragment(){
 
     }
@@ -56,11 +55,10 @@ public class HomeFragment extends Fragment {
         TextView headline = (TextView)getActivity().findViewById(R.id.textView);
         TextView description = (TextView)getActivity().findViewById(R.id.desc);
 
-        headline.setText("Market News");
+        headline.setText("Morning Market News");
         description.setText("10 Headlines to get you up to speed");
 
         new GetStockNews().execute();
-
 
     }
 
@@ -77,9 +75,8 @@ public class HomeFragment extends Fragment {
 
                 JSONObject stringData = new JSONObject();
                 ArrayList<String> titleList = new ArrayList<>();
-                ArrayList<String> imageList = new ArrayList<>();
 
-                URL url = new URL("https://newsdata.io/api/1/news?apikey=pub_3181677e360dff5788264fa1d678603f21a&q=stocks");
+                URL url = new URL("https://newsdata.io/api/1/news?apikey=pub_34062194a32fb87e2ed783d7187b10ed9bd&q=stocks");
                 URLConnection urlConnection = url.openConnection();
                 InputStream inputStream = urlConnection.getInputStream();
                 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
@@ -98,18 +95,6 @@ public class HomeFragment extends Fragment {
                 titleList.add(stringData.getJSONArray("results").getJSONObject(7).get("title").toString());
                 titleList.add(stringData.getJSONArray("results").getJSONObject(8).get("title").toString());
                 titleList.add(stringData.getJSONArray("results").getJSONObject(9).get("title").toString());
-
-                imageList.add(stringData.getJSONArray("results").getJSONObject(0).get("image_url").toString());
-                imageList.add(stringData.getJSONArray("results").getJSONObject(1).get("image_url").toString());
-                imageList.add(stringData.getJSONArray("results").getJSONObject(2).get("image_url").toString());
-                imageList.add(stringData.getJSONArray("results").getJSONObject(3).get("image_url").toString());
-                imageList.add(stringData.getJSONArray("results").getJSONObject(4).get("image_url").toString());
-                imageList.add(stringData.getJSONArray("results").getJSONObject(5).get("image_url").toString());
-                imageList.add(stringData.getJSONArray("results").getJSONObject(6).get("image_url").toString());
-                imageList.add(stringData.getJSONArray("results").getJSONObject(7).get("image_url").toString());
-                imageList.add(stringData.getJSONArray("results").getJSONObject(8).get("image_url").toString());
-                imageList.add(stringData.getJSONArray("results").getJSONObject(9).get("image_url").toString());
-
 
                 arrayAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1,titleList);
 

@@ -10,6 +10,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -37,17 +38,16 @@ public class MainActivity extends AppCompatActivity {
         setTheme(R.style.Theme_Stockify);
         setContentView(R.layout.activity_main);
 
-
-
         BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
         bottomNav.setOnNavigationItemSelectedListener(navListener);
 
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
-        new GetStockData().execute();
+        new GetNewsData().execute();
 
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
 
     }
-    private class GetStockData extends AsyncTask<Void, Void, Void> {
+    private class GetNewsData extends AsyncTask<Void, Void, Void> {
 
         JSONObject stringData = new JSONObject();
         @RequiresApi(api = Build.VERSION_CODES.N)
@@ -78,20 +78,6 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(Void aVoid) {
 
-
-            try {
-
-   //             JSONObject time = stringData.getJSONObject("Meta Data");
-
-                JSONObject time = stringData.getJSONObject("Time Series (5min)");
-                String data = time.toString();
-            //    tv.setText(data);
-
-                Log.d("Open",time.toString());
-
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
             super.onPostExecute(aVoid);
         }
     }
