@@ -1,4 +1,4 @@
-# StockifyProject
+# Stockify Project
 
 Stockify is an android application that allows those who are new to the stock world to dip their feet into the trading & investment world.
 
