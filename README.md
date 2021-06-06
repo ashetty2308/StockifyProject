@@ -13,6 +13,7 @@ Features:
 - Users can save any news headlines that they want.
 - These articles are connected to firebase, and the saved headlines are displayed in the "Saved" section of the app, where a list of all the headines saved will appear.
 
+GraphView: https://github.com/jjoe64/GraphView
 
 Splash Screen: 
 
