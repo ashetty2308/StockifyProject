@@ -16,39 +16,39 @@ Features:
 
 Splash Screen: 
 
-![splashscreengithub](https://user-images.githubusercontent.com/77937577/120901280-db39c880-c607-11eb-9a58-304972145432.png)
+<img src = "https://user-images.githubusercontent.com/77937577/120901280-db39c880-c607-11eb-9a58-304972145432.png" width = "250" height = "450">
 
 ***************
 
 Home Screen (Headlines): 
 
-![Screenshot_1622810989](https://user-images.githubusercontent.com/77937577/120901286-e260d680-c607-11eb-81c7-a2932621d7be.png)
+<img src = "https://user-images.githubusercontent.com/77937577/120901286-e260d680-c607-11eb-81c7-a2932621d7be.png" width = "250" height = "450">
 
 ***************
 
 News Activity Example: 
 
-![Screenshot_1622811023](https://user-images.githubusercontent.com/77937577/120901308-fb698780-c607-11eb-9135-db570676d9a8.png)
+<img src = "https://user-images.githubusercontent.com/77937577/120901308-fb698780-c607-11eb-9135-db570676d9a8.png" width = "250" height = "450">
 
 ***************
 
 Ticker Search:
 
-![Screenshot_1622811037](https://user-images.githubusercontent.com/77937577/120901316-0c19fd80-c608-11eb-90b9-39909c663725.png)
+<img src = "https://user-images.githubusercontent.com/77937577/120901316-0c19fd80-c608-11eb-90b9-39909c663725.png" width = "250" height = "450">
 
 ***************
 
 Stock Data Search: 
 
-![Screenshot_1622811045](https://user-images.githubusercontent.com/77937577/120901324-1805bf80-c608-11eb-8672-a03b72a9f987.png)
+<img src = "https://user-images.githubusercontent.com/77937577/120901324-1805bf80-c608-11eb-8672-a03b72a9f987.png" width = "250" height = "450">
 
 
-![Screenshot_1622761004](https://user-images.githubusercontent.com/77937577/120901330-20f69100-c608-11eb-9730-dd7c464c7f41.png)
+<img src = "https://user-images.githubusercontent.com/77937577/120901330-20f69100-c608-11eb-9730-dd7c464c7f41.png" width = "250" height = "450">
 
 
 Firebase: 
 
-![Firebase console](https://user-images.githubusercontent.com/77937577/120901378-703cc180-c608-11eb-999a-daec895f8eb3.PNG)
+<img src = "https://user-images.githubusercontent.com/77937577/120901378-703cc180-c608-11eb-999a-daec895f8eb3.PNG" width = "1500" height = "450">
 
-![Screenshot_1622916884](https://user-images.githubusercontent.com/77937577/120901379-729f1b80-c608-11eb-9d86-ec9d991d2983.png)
+<img src = "https://user-images.githubusercontent.com/77937577/120901379-729f1b80-c608-11eb-9d86-ec9d991d2983.png" width = "250" height = "450">
 
