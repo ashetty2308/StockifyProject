@@ -42,6 +42,8 @@ Ticker Search:
 
 <img src = "https://user-images.githubusercontent.com/77937577/120901316-0c19fd80-c608-11eb-90b9-39909c663725.png" width = "250" height = "450">
 
+<img src = "https://user-images.githubusercontent.com/77937577/121098585-2bf62080-c7c4-11eb-899e-da4632db9c9b.png" width = "250" height = "450">
+
 ***************
 
 Stock Data Search: 
