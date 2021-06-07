@@ -15,6 +15,8 @@ Features:
 
 GraphView: https://github.com/jjoe64/GraphView
 
+***************
+
 Splash Screen: 
 
 <img src = "https://user-images.githubusercontent.com/77937577/120901280-db39c880-c607-11eb-9a58-304972145432.png" width = "250" height = "450">
@@ -46,6 +48,7 @@ Stock Data Search:
 
 <img src = "https://user-images.githubusercontent.com/77937577/120901330-20f69100-c608-11eb-9730-dd7c464c7f41.png" width = "250" height = "450">
 
+***************
 
 Firebase: 
 
