@@ -56,9 +56,5 @@ Stock Data Search:
 Firebase: 
 
 <img src = "https://user-images.githubusercontent.com/77937577/120901378-703cc180-c608-11eb-999a-daec895f8eb3.PNG" width = "1500" height = "450">
-(^ This is the console that shows real-time data) 
-
-
 
 <img src = "https://user-images.githubusercontent.com/77937577/120901379-729f1b80-c608-11eb-9d86-ec9d991d2983.png" width = "250" height = "450">
-(The resulting listview that is displayed as per the firebase data) 
