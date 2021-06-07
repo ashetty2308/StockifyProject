@@ -45,8 +45,11 @@ Stock Data Search:
 
 <img src = "https://user-images.githubusercontent.com/77937577/120901324-1805bf80-c608-11eb-8672-a03b72a9f987.png" width = "250" height = "450">
 
+<img src = "https://user-images.githubusercontent.com/77937577/121035109-8fa82b80-c77b-11eb-9f84-9074530c15fd.png" width = "250" height = "450">
 
 <img src = "https://user-images.githubusercontent.com/77937577/120901330-20f69100-c608-11eb-9730-dd7c464c7f41.png" width = "250" height = "450">
+ 
+ (This was an older screenshot, so the bottom navigation bar looks a little bit different)                                     
 
 ***************
 
