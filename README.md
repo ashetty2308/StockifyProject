@@ -33,6 +33,8 @@ News Activity Example:
 
 <img src = "https://user-images.githubusercontent.com/77937577/120901308-fb698780-c607-11eb-9135-db570676d9a8.png" width = "250" height = "450">
 
+**In the top right, there is a Floating Action Button, which users can click to save the headline displayed.**
+
 **Note that the image loaded at the top is either a generic wall street image, or the actual image used by the news article. However, sometimes the Newsdata.io API doesn't provide the image URL, so I can't load anything with Picasso. In that case, I load a generic wall street image.**
 
 
