@@ -52,6 +52,8 @@ Stock Data Search:
 <img src = "https://user-images.githubusercontent.com/77937577/120901324-1805bf80-c608-11eb-8672-a03b72a9f987.png" width = "250" height = "450">
 
 <img src = "https://user-images.githubusercontent.com/77937577/121035109-8fa82b80-c77b-11eb-9f84-9074530c15fd.png" width = "250" height = "450">
+
+(Note that this search is not case-sensitive, so users can type in all lowercase if they want) 
                           
 ***************
 
