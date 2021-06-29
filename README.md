@@ -37,6 +37,8 @@ News Activity Example:
 
 **Note that the image loaded at the top is either a generic wall street image, or the actual image used by the news article. However, sometimes the Newsdata.io API doesn't provide the image URL, so I can't load anything with Picasso. In that case, I load a generic wall street image.**
 
+Piccaso: https://square.github.io/picasso/
+
 
 ***************
 
